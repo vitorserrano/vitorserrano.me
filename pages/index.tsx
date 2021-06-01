@@ -9,7 +9,7 @@ const Home = (): JSX.Element => {
       </Head>
 
       <main>
-        <h1>Hello World</h1>
+        <h1>Vitor Serrano</h1>
       </main>
     </div>
   );
