@@ -1,6 +1,6 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-const Home = (): JSX.Element => {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -12,7 +12,7 @@ const Home = (): JSX.Element => {
         <h1>Vitor Serrano</h1>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
