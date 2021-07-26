@@ -1,44 +1,27 @@
-import LottieView from 'react-lottie'
-
 import { Container } from '../../Container'
 import { Social } from '../../Social'
 
-import DevAnimation from '../../../assets/dev.json'
-
-import { Title, Description, Animation } from './styles'
+import { Info, Title, Description, Illustration, Animation } from './styles'
 
 export const Banner = () => {
   return (
     <Container variant="dark">
-      <div>
+      <Info>
         <Title>
           Vitor <br /> Serrano
         </Title>
 
         <Description>
-          Desenvolvedor Front-end web e mobile, <br /> apaixonado por todo
+          Desenvolvedor Front-end web e mobile, <br /> apaixonado pelo
           ecossistema JavaScript e <br /> nas horas vagas estudante de Design
         </Description>
 
         <Social />
-      </div>
+      </Info>
 
-      <div>
-        <Animation>
-          <LottieView
-            options={{
-              loop: true,
-              autoplay: true,
-              animationData: DevAnimation,
-              rendererSettings: {
-                preserveAspectRatio: 'xMidYMid slice',
-              },
-            }}
-            width={420}
-            height={420}
-          />
-        </Animation>
-      </div>
+      <Illustration>
+        <Animation width="100%" height="100%" />
+      </Illustration>
     </Container>
   )
 }

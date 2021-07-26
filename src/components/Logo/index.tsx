@@ -1,11 +1,8 @@
-import { FiZap } from 'react-icons/fi'
-
-import { Container } from './styles'
-import { colors } from '../../styles/theme/colors'
+import { Container, Icon } from './styles'
 
 export const Logo = () => (
   <Container>
-    <FiZap color={colors.primary} size={40} />
+    <Icon />
 
     <h1>
       vitor<strong>.</strong>
