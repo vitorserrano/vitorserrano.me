@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.a`
-  ${({ theme: { colors, fonts, fontSizes } }) => css`
+  ${({ theme: { colors, fonts, breakpoints } }) => css`
     height: 64px;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@ export const Container = styled.a`
     span {
       color: ${colors.background};
       font-family: ${fonts.text};
-      font-size: ${fontSizes.md};
+      font-size: ${breakpoints.fontSizes.md};
       font-weight: 400;
       margin-left: 14px;
     }
