@@ -1,17 +1,19 @@
 import Head from 'next/head'
 
+import { Header } from '../components/Header'
+import { Main } from '../components/Main'
+
 const Home = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Vitor Serrano</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>Vitor Serrano</h1>
-      </main>
-    </div>
+      <Header />
+      <Main />
+    </>
   )
 }
 
