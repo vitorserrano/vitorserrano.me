@@ -8,7 +8,11 @@ export const Navbar = () => {
   const [drawerIsVisible, setDrawerisVisible] = useState(false)
 
   const handleToggleDrawer = () => {
-    document.body.style.overflow = !drawerIsVisible ? 'hidden' : 'unset'
+    document.body.style.overflow = drawerIsVisible ? 'unset' : 'hidden'
+    document.getElementsByTagName('main')[0].style.display = drawerIsVisible
+      ? 'block'
+      : 'none'
+
     setDrawerisVisible(!drawerIsVisible)
   }
 
