@@ -10,6 +10,7 @@ export const Section = styled.section<Props>`
   background-color: ${({ variant }) => variant};
   transition: all 0.3s ease-out;
   align-items: center;
+  z-index: 5;
 `
 
 export const Wrapper = styled.div<Props>`
@@ -23,6 +24,7 @@ export const Wrapper = styled.div<Props>`
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease-out;
+  z-index: 10;
 
   ${({ theme: { breakpoints } }) => css`
     ${breakpoints.devices.lg} {

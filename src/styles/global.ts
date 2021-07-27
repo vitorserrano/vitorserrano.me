@@ -11,6 +11,9 @@ export default createGlobalStyle`
     ${({ theme: { colors } }) => css`
       background-color: ${colors.background};
       color: ${colors.text};
+      overflow: unset;
+      scroll-behavior: smooth;
+      z-index: 1;
     `}
   }
 `

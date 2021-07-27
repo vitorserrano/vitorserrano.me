@@ -16,7 +16,7 @@ export const Banner = () => {
           ecossistema JavaScript e <br /> nas horas vagas estudante de Design
         </Description>
 
-        <Social />
+        <Social horizontal />
       </Info>
 
       <Illustration>
