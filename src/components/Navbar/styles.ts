@@ -1,9 +1,11 @@
 import styled, { css } from 'styled-components'
 
-import { FiAlignRight } from 'react-icons/fi'
-
 export const Container = styled.div`
   ${({ theme: { colors, fonts, breakpoints } }) => css`
+    body {
+      overflow: hidden;
+    }
+
     .items {
       display: none;
     }
@@ -27,21 +29,6 @@ export const Container = styled.div`
         gap: 40px;
         list-style: none;
       }
-    }
-  `}
-`
-
-export const Drawer = styled(FiAlignRight)`
-  ${({ theme: { colors, breakpoints } }) => css`
-    color: ${colors.text};
-    font-size: ${breakpoints.fontSizes.lg};
-
-    ${breakpoints.devices.md} {
-      font-size: ${breakpoints.fontSizes.xl};
-    }
-
-    ${breakpoints.devices.xl} {
-      display: none;
     }
   `}
 `

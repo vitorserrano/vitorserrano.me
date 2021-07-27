@@ -1,6 +1,17 @@
-import { Container, Drawer } from './styles'
+import { useState } from 'react'
+
+import { Drawer } from './Drawer'
+
+import { Container } from './styles'
 
 export const Navbar = () => {
+  const [drawerIsVisible, setDrawerisVisible] = useState(false)
+
+  const handleToggleDrawer = () => {
+    document.body.style.overflow = !drawerIsVisible ? 'hidden' : 'unset'
+    setDrawerisVisible(!drawerIsVisible)
+  }
+
   return (
     <Container>
       <ul className="items">
@@ -21,7 +32,7 @@ export const Navbar = () => {
         </li>
       </ul>
 
-      <Drawer />
+      <Drawer isOpen={drawerIsVisible} onOpen={handleToggleDrawer} />
     </Container>
   )
 }
