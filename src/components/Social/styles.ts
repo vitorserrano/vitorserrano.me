@@ -1,12 +1,18 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+type ContainerProps = {
+  horizontal: boolean
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  flex-direction: ${({ horizontal }) => (horizontal ? 'row' : 'column')};
 `
 
 export const Item = styled.a`
-  margin-right: 18px;
   background-color: ${({ theme }) => theme.colors.backgroundLight};
   padding: 10px;
   display: flex;

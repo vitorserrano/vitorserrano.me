@@ -5,9 +5,13 @@ import { social } from '../../utils/social'
 
 import { Container, Item } from './styles'
 
-export const Social = () => {
+type SocialProps = {
+  horizontal?: boolean
+}
+
+export const Social = ({ horizontal = false }: SocialProps) => {
   return (
-    <Container>
+    <Container horizontal={horizontal}>
       {social.map(item => {
         const TagName = Feather[item.name]
 
