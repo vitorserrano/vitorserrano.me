@@ -1,16 +1,23 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.header`
-  display: flex;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.colors.background};
+  ${({ theme: { colors, breakpoints } }) => css`
+    display: flex;
+    justify-content: center;
+    background-color: ${colors.background};
+    height: 80px;
+
+    ${breakpoints.devices.md} {
+      height: 120px;
+    }
+  `}
 `
 
 export const Container = styled.div`
   ${({ theme: { colors, breakpoints } }) => css`
     width: 100%;
     background-color: ${colors.background};
-    padding: 44px 24px;
+    padding: 0 24px;
 
     display: flex;
     justify-content: space-between;
@@ -19,7 +26,7 @@ export const Container = styled.div`
     box-shadow: inset 0 -1px 0 #d9d9d9;
 
     ${breakpoints.devices.xl} {
-      padding: 44px 0;
+      padding: 0;
       max-width: 70rem;
       min-width: 70rem;
     }
