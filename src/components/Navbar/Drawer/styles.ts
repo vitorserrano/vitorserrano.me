@@ -32,12 +32,12 @@ export const CloseIcon = styled(FiX)`
   ${styledIcon}
 `
 
-export const Container = styled.div<Props>`
+export const Container = styled.nav<Props>`
   ${({ theme: { colors, fonts, breakpoints }, isOpen }) => css`
     display: ${isOpen ? 'flex' : 'none'};
     background-color: ${colors.background};
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 80px;
     left: 0;
     right: 0;
