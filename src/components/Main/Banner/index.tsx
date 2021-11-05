@@ -1,20 +1,23 @@
 import { Container } from '../../Container'
 import { Social } from '../../Social'
 
-import { Info, Title, Description, Illustration, Animation } from './styles'
+import { Heading } from '../../Base/Heading'
+import { Paragraph } from '../../Base/Paragraph'
+
+import { Info, Illustration, Animation } from './styles'
 
 export const Banner = () => {
   return (
     <Container variant="dark">
       <Info>
-        <Title>
+        <Heading>
           Vitor <br /> Serrano
-        </Title>
+        </Heading>
 
-        <Description>
+        <Paragraph>
           Desenvolvedor Front-end web e mobile, <br /> apaixonado pelo
           ecossistema JavaScript e <br /> nas horas vagas estudante de Design
-        </Description>
+        </Paragraph>
 
         <Social horizontal />
       </Info>

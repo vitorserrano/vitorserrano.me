@@ -17,31 +17,6 @@ export const Info = styled.div`
   `}
 `
 
-export const Title = styled.span`
-  ${({ theme: { colors, fonts, breakpoints } }) => css`
-    color: ${colors.text};
-    font-family: ${fonts.heading};
-    font-weight: 700;
-    font-size: ${breakpoints.fontSizes['2xl']};
-    margin-bottom: 16px;
-  `}
-`
-
-export const Description = styled.p`
-  ${({ theme: { colors, fonts, breakpoints } }) => css`
-    color: ${colors.description};
-    font-family: ${fonts.text};
-    font-size: ${breakpoints.fontSizes.sm};
-    max-width: 480px;
-    line-height: 28px;
-    margin-bottom: 40px;
-
-    ${breakpoints.devices.sm} {
-      font-size: ${breakpoints.fontSizes.xs};
-    }
-  `}
-`
-
 export const Illustration = styled.div`
   display: flex;
   justify-content: center;
