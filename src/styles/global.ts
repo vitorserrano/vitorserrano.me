@@ -9,8 +9,8 @@ export default createGlobalStyle`
   
   body {
     ${({ theme: { colors } }) => css`
-      background-color: ${colors.background};
-      color: ${colors.text};
+      background-color: ${colors.backgroundDark};
+      color: ${colors.heading};
       overflow: unset;
       scroll-behavior: smooth;
       z-index: 1;
