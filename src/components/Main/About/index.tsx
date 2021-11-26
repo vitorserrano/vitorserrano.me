@@ -3,29 +3,36 @@ import { Container } from '../../Container'
 import { Heading } from '../../Base/Heading'
 import { Paragraph } from '../../Base/Paragraph'
 
-export const About = () => {
-  return (
-    <Container variant="light">
-      <div>
-        <Heading>Um pouco sobre mim</Heading>
+import { Illustration, Animation } from './styles'
 
-        <Paragraph>
-          Atualmente sou Desenvolvedor Web atuando com PHP, AngularJS e
-          JavaScript nos projetos/produtos do meu atual emprego.
-        </Paragraph>
+export const About = () => (
+  <Container variant="light">
+    <Illustration>
+      <Animation width="100%" height="100%" />
+    </Illustration>
 
-        <Paragraph>
-          Estudo Node.js, React e React Native por conta própria, pois sou
-          apaixonado por todo o ecossistema JavaScritpt e acredito que com essa
-          stack de tecnologias irei alcançar meus objetivos.
-        </Paragraph>
+    <div>
+      <Heading>
+        Um pouco <br /> sobre mim
+      </Heading>
 
-        <Paragraph>
-          Meu objetivo é criar aplicações limpas utilizando bons padrões de
-          códigos com um design simples e intuitivo. Sou movido por construir
-          soluções com tecnologias atuais e escaláveis.
-        </Paragraph>
-      </div>
-    </Container>
-  )
-}
+      <Paragraph>
+        Sou nascido em Cianorte uma cidade no interior do Paraná, amo jogos
+        eletrônicos, futebol e basquete.
+      </Paragraph>
+
+      <Paragraph>
+        Crio soluções mobile utilizando <strong>React Native</strong>.
+        Apaixonado por tecnologias atuais e escaláveis, quero me especializar
+        cada vez mais em todo os ecossistema <strong>mobile</strong>.
+      </Paragraph>
+
+      <Paragraph>
+        Acredito que compartilhar conhecimento e trabalhar em equipe são os
+        maiores pilares de grandes desenvolvedores, por isso faço parte da
+        comunidade de desenvolvedores de Cianorte, a nossa tão amada {''}
+        <strong>DevCia</strong>.
+      </Paragraph>
+    </div>
+  </Container>
+)
