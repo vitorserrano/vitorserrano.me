@@ -11,7 +11,7 @@ export const Container = styled.div`
     }
 
     h2 {
-      color: ${colors.text};
+      color: ${colors.heading};
       font-family: ${fonts.heading};
       font-size: ${breakpoints.fontSizes.md};
       font-weight: 500;

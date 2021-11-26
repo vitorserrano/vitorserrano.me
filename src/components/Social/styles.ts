@@ -10,6 +10,7 @@ export const Container = styled.div<ContainerProps>`
   flex-wrap: wrap;
   gap: 18px;
   flex-direction: ${({ horizontal }) => (horizontal ? 'row' : 'column')};
+  margin-top: 40px;
 `
 
 export const Item = styled.a`
@@ -20,9 +21,24 @@ export const Item = styled.a`
   align-items: center;
   border-radius: 8px;
   cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-out;
 
   &:hover {
     transition: all 0.3s ease-out;
-    background-color: #d9d9d9;
+
+    border: 2px solid ${({ theme }) => theme.colors.backgroundLight};
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+
+    border-image: linear-gradient(
+        225deg,
+        ${({ theme }) => theme.colors.primary} 0%,
+        ${({ theme }) => theme.colors.backgroundLight} 100%
+      )
+      1;
   }
 `

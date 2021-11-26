@@ -4,8 +4,10 @@ export const Wrapper = styled.header`
   ${({ theme: { colors, breakpoints } }) => css`
     display: flex;
     justify-content: center;
-    background-color: ${colors.background};
+    background: ${colors.backgroundLight};
     height: 80px;
+    transition: all 0.3s ease-out;
+    box-shadow: inset 0 -1px 0 #29292e;
 
     ${breakpoints.devices.md} {
       height: 120px;
@@ -16,14 +18,14 @@ export const Wrapper = styled.header`
 export const Container = styled.div`
   ${({ theme: { colors, breakpoints } }) => css`
     width: 100%;
-    background-color: ${colors.background};
+    background: ${colors.backgroundLight};
     padding: 0 24px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease-out;
-    box-shadow: inset 0 -1px 0 #d9d9d9;
+    box-shadow: inset 0 -1px 0 #29292e;
 
     ${breakpoints.devices.xl} {
       padding: 0;

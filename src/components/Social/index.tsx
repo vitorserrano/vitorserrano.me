@@ -10,20 +10,18 @@ type SocialProps = {
   horizontal?: boolean
 }
 
-export const Social = ({ horizontal = false }: SocialProps) => {
-  return (
-    <Container horizontal={horizontal}>
-      {social.map(item => {
-        const TagName = Feather[item.name]
+export const Social = ({ horizontal = false }: SocialProps) => (
+  <Container horizontal={horizontal}>
+    {social.map(item => {
+      const TagName = Feather[item.name]
 
-        return (
-          <Link key={item.id} href={item.href} passHref>
-            <Item target="_blank">
-              <TagName color={colors.primary} size={26} />
-            </Item>
-          </Link>
-        )
-      })}
-    </Container>
-  )
-}
+      return (
+        <Link key={item.id} href={item.href} passHref>
+          <Item target="_blank">
+            <TagName color={colors.primary} size={26} />
+          </Item>
+        </Link>
+      )
+    })}
+  </Container>
+)

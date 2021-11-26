@@ -17,15 +17,6 @@ export const Info = styled.div`
   `}
 `
 
-export const Illustration = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to left, #814dd4, #986edc, #b699e6);
-  box-shadow: 0px 0px 14px 4px rgba(105, 42, 204, 0.5);
-  border-radius: 100%;
-`
-
 export const Animation = styled(LottieView).attrs({
   options: {
     loop: true,

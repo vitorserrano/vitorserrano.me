@@ -9,7 +9,7 @@ export const Container = styled.a`
     background-color: ${colors.primary};
 
     span {
-      color: ${colors.background};
+      color: ${colors.text};
       font-family: ${fonts.text};
       font-size: ${breakpoints.fontSizes.md};
       font-weight: 400;

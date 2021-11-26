@@ -10,11 +10,9 @@ type ButtonProps = {
   href: string
 }
 
-export const Button = ({ title, icon: Icon, href }: ButtonProps) => {
-  return (
-    <Container href={href}>
-      <Icon color={colors.background} size={26} />
-      <span>{title}</span>
-    </Container>
-  )
-}
+export const Button = ({ title, icon: Icon, href }: ButtonProps) => (
+  <Container href={href}>
+    <Icon color={colors.background} size={26} />
+    <span>{title}</span>
+  </Container>
+)

@@ -7,7 +7,7 @@ type Props = {
 export const Section = styled.section<Props>`
   display: flex;
   justify-content: center;
-  background-color: ${({ variant }) => variant};
+  background: ${({ variant }) => variant};
   transition: all 0.3s ease-out;
   align-items: center;
   z-index: 5;
@@ -17,11 +17,10 @@ export const Wrapper = styled.div<Props>`
   width: 100%;
   height: 100%;
   padding: 160px 24px;
-  background-color: ${({ variant }) => variant};
-
+  background: ${({ variant }) => variant};
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   transition: all 0.3s ease-out;
   z-index: 10;
@@ -29,6 +28,7 @@ export const Wrapper = styled.div<Props>`
   ${({ theme: { breakpoints } }) => css`
     ${breakpoints.devices.lg} {
       flex-direction: row;
+      justify-content: space-between;
     }
 
     ${breakpoints.devices.xl} {

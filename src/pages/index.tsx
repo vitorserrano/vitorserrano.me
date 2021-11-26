@@ -1,20 +1,17 @@
 import Head from 'next/head'
 
-import { Header } from '../components/Header'
-import { Main } from '../components/Main'
+import { Header, Main } from '../components'
 
-const Home = () => {
-  return (
-    <>
-      <Head>
-        <title>Vitor Serrano</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home = () => (
+  <>
+    <Head>
+      <title>Vitor Serrano</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
 
-      <Header />
-      <Main />
-    </>
-  )
-}
+    <Header />
+    <Main />
+  </>
+)
 
 export default Home

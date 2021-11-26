@@ -9,7 +9,7 @@ export const Container = styled.div`
       align-items: center;
 
       h1 {
-        color: ${colors.text};
+        color: ${colors.heading};
         font-family: ${fonts.heading};
         font-size: ${breakpoints.fontSizes.lg};
         font-weight: 700;

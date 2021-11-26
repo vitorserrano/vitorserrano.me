@@ -16,24 +16,16 @@ export const Navbar = () => {
     setDrawerisVisible(!drawerIsVisible)
   }
 
+  const sections = ['Sobre', 'Skills', 'Projetos', 'Experiência', 'Contato']
+
   return (
     <Container>
       <ul className="items">
-        <li>
-          <h2>Sobre</h2>
-        </li>
-        <li>
-          <h2>Skills</h2>
-        </li>
-        <li>
-          <h2>Projetos</h2>
-        </li>
-        <li>
-          <h2>Experiência</h2>
-        </li>
-        <li>
-          <h2>Contato</h2>
-        </li>
+        {sections.map((section, index) => (
+          <li key={String(index)}>
+            <h2>{section}</h2>
+          </li>
+        ))}
       </ul>
 
       <Drawer isOpen={drawerIsVisible} onOpen={handleToggleDrawer} />

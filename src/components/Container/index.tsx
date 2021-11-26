@@ -10,7 +10,7 @@ type ContainerProps = {
 
 export const Container = ({ variant = 'dark', children }: ContainerProps) => {
   const variantColor = {
-    dark: colors.background,
+    dark: colors.backgroundDark,
     light: colors.backgroundLight,
   }
 
