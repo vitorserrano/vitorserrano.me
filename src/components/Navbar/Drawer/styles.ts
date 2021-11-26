@@ -35,7 +35,7 @@ export const CloseIcon = styled(FiX)`
 export const Container = styled.nav<Props>`
   ${({ theme: { colors, fonts, breakpoints }, isOpen }) => css`
     display: ${isOpen ? 'flex' : 'none'};
-    background-color: ${colors.backgroundLinear};
+    background-color: ${colors.backgroundDark};
     width: 100%;
     position: fixed;
     top: 80px;

@@ -12,7 +12,7 @@ type ButtonProps = {
 
 export const Button = ({ title, icon: Icon, href }: ButtonProps) => (
   <Container href={href}>
-    <Icon color={colors.background} size={26} />
+    <Icon color={colors.heading} size={26} />
     <span>{title}</span>
   </Container>
 )
