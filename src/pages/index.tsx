@@ -1,4 +1,4 @@
-import { InferGetStaticPropsType } from 'next'
+import { InferGetServerSidePropsType } from 'next'
 import Head from 'next/head'
 
 import client from '../../apollo-client'
@@ -7,7 +7,7 @@ import { Repositories } from '../graphql/schema'
 
 import { Header, Main } from '../components'
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   try {
     const { data }: Repositories = await client.query({
       query: getRepositories,
@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
 
 const Home = ({
   repositories,
-}: InferGetStaticPropsType<typeof getStaticProps>) => (
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => (
   <>
     <Head>
       <title>Vitor Serrano</title>
