@@ -1,16 +1,10 @@
-import {
-  IoLogoJavascript,
-  IoLogoReact,
-  IoLogoFirebase,
-  IoLogoFigma,
-} from 'react-icons/io5'
-
-import { SiTypescript, SiStyledComponents } from 'react-icons/si'
-
 import { Container } from '../../Container'
 
 import { Heading } from '../../Base/Heading'
 import { Paragraph } from '../../Base/Paragraph'
+
+import { tecnologies } from '../../../utils/tecnologies'
+import { colors } from '../../../styles/theme/colors'
 
 import { Info, Grid, Card } from './styles'
 
@@ -28,30 +22,17 @@ export const Skills = () => (
     </Info>
 
     <Grid>
-      <Card>
-        <IoLogoJavascript color="#692ACC" size="54" />
-        <p>Javascript</p>
-      </Card>
-      <Card>
-        <SiTypescript color="#692ACC" size="54" />
-        <p>Typescript</p>
-      </Card>
-      <Card>
-        <IoLogoReact color="#692ACC" size="54" />
-        <p>React Native</p>
-      </Card>
-      <Card>
-        <IoLogoFirebase color="#692ACC" size="54" />
-        <p>Firebase</p>
-      </Card>
-      <Card>
-        <IoLogoFigma color="#692ACC" size="54" />
-        <p>Figma</p>
-      </Card>
-      <Card>
-        <SiStyledComponents color="#692ACC" size="54" />
-        <p>Styled Components</p>
-      </Card>
+      {tecnologies.map(tecnology => {
+        const Icon = tecnology.iconComponent
+
+        return (
+          <Card key={tecnology.id}>
+            <Icon color={colors.primary} size={54} />
+
+            <p>{tecnology.label}</p>
+          </Card>
+        )
+      })}
     </Grid>
   </Container>
 )
