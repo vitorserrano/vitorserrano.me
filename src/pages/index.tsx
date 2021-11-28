@@ -1,4 +1,4 @@
-import { InferGetServerSidePropsType } from 'next'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 
 import client from '../../apollo-client'
@@ -7,7 +7,23 @@ import { Repositories } from '../graphql/schema'
 
 import { Header, Main } from '../components'
 
-export const getServerSideProps = async () => {
+export default function Home({
+  repositories,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  return (
+    <>
+      <Head>
+        <title>Vitor Serrano</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Header />
+      <Main repositories={repositories} />
+    </>
+  )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
   try {
     const { data }: Repositories = await client.query({
       query: getRepositories,
@@ -17,26 +33,12 @@ export const getServerSideProps = async () => {
       props: {
         repositories: data.user.pinnedItems.nodes,
       },
+      revalidate: 10,
     }
   } catch {
     return {
       props: { repositories: [] },
+      revalidate: 10,
     }
   }
 }
-
-const Home = ({
-  repositories,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => (
-  <>
-    <Head>
-      <title>Vitor Serrano</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-
-    <Header />
-    <Main repositories={repositories} />
-  </>
-)
-
-export default Home
