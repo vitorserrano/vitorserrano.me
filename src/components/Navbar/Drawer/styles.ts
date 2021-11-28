@@ -65,7 +65,7 @@ export const Container = styled.nav<Props>`
 
         li {
           height: 56px;
-          background: linear-gradient(90deg, #d9d9d9, rgba(228, 228, 250, 0));
+          background: linear-gradient(90deg, #17161d, rgba(9, 9, 10, 0));
           border-radius: 5px;
           width: 100%;
           display: flex;
