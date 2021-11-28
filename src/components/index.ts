@@ -1,0 +1,10 @@
+export { Button } from './Button'
+export { Container } from './Container'
+export { Header } from './Header'
+export { Logo } from './Logo'
+export { Main } from './Main'
+export { Navbar } from './Navbar'
+export { Social } from './Social'
+
+export { Heading } from './Base/Heading'
+export { Paragraph } from './Base/Paragraph'
