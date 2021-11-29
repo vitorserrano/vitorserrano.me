@@ -50,6 +50,10 @@ export const Grid = styled.div`
       grid-template-columns: repeat(2, 1fr);
     }
   `}
+
+  a {
+    text-decoration: none;
+  }
 `
 
 export const Card = styled.div`
