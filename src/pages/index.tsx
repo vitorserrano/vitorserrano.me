@@ -5,7 +5,7 @@ import client from '../../apollo-client'
 import { getRepositories } from '../graphql/queries/getRepositories'
 import { Repositories } from '../graphql/schema'
 
-import { Header, Main } from '../components'
+import { Header, Main, Footer } from '../components'
 
 export default function Home({
   repositories,
@@ -19,6 +19,7 @@ export default function Home({
 
       <Header />
       <Main repositories={repositories} />
+      <Footer />
     </>
   )
 }

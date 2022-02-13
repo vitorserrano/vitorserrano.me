@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 type ContainerProps = {
-  horizontal: boolean
+  direction: 'column' | 'row'
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -9,8 +9,7 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   flex-wrap: wrap;
   gap: 18px;
-  flex-direction: ${({ horizontal }) => (horizontal ? 'row' : 'column')};
-  margin-top: 40px;
+  flex-direction: ${({ direction }) => direction};
 `
 
 export const Item = styled.a`

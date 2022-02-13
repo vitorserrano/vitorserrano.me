@@ -5,6 +5,6 @@ export { Logo } from './Logo'
 export { Main } from './Main'
 export { Navbar } from './Navbar'
 export { Social } from './Social'
-
 export { Heading } from './Base/Heading'
 export { Paragraph } from './Base/Paragraph'
+export { Footer } from './Footer'

@@ -34,7 +34,7 @@ export const Drawer = ({ isOpen, onOpen }: DrawerProps) => {
             </li>
           </div>
 
-          <Social horizontal />
+          <Social direction="column" />
         </ul>
       </Container>
     </>
