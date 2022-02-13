@@ -13,12 +13,14 @@ export const Banner = () => (
         Vitor <br /> Serrano
       </Heading>
 
-      <Paragraph>
-        Desenvolvedor Front-end web e mobile, <br /> apaixonado pelo ecossistema
-        JavaScript e <br /> nas horas vagas estudante de Design
-      </Paragraph>
+      <div style={{ marginBottom: 40 }}>
+        <Paragraph>
+          Desenvolvedor Front-end web e mobile, <br /> apaixonado pelo
+          ecossistema JavaScript e <br /> nas horas vagas estudante de Design
+        </Paragraph>
+      </div>
 
-      <Social horizontal />
+      <Social direction="row" />
     </Info>
 
     <div>

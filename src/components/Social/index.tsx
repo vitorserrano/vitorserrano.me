@@ -7,11 +7,11 @@ import { Container, Item } from './styles'
 import { colors } from '../../styles/theme/colors'
 
 type SocialProps = {
-  horizontal?: boolean
+  direction: 'column' | 'row'
 }
 
-export const Social = ({ horizontal = false }: SocialProps) => (
-  <Container horizontal={horizontal}>
+export const Social = ({ direction }: SocialProps) => (
+  <Container direction={direction}>
     {social.map(item => {
       const TagName = Feather[item.name]
 
