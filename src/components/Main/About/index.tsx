@@ -3,7 +3,7 @@ import { Container } from '../../Container'
 import { Heading } from '../../Base/Heading'
 import { Paragraph } from '../../Base/Paragraph'
 
-import { Illustration, Animation } from './styles'
+import { Illustration, Animation, Content } from './styles'
 
 export const About = () => (
   <Container variant="light">
@@ -11,7 +11,7 @@ export const About = () => (
       <Animation width="100%" height="100%" />
     </Illustration>
 
-    <div>
+    <Content>
       <Heading>
         Um pouco <br /> sobre mim
       </Heading>
@@ -33,6 +33,6 @@ export const About = () => (
         comunidade de desenvolvedores de Cianorte, a nossa tão amada {''}
         <strong>DevCia</strong>.
       </Paragraph>
-    </div>
+    </Content>
   </Container>
 )
