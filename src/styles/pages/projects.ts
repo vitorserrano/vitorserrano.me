@@ -25,6 +25,7 @@ export const Card = styled('div', {
   borderRadius: 12,
   padding: 20,
   cursor: 'pointer',
+  height: '100%',
   transition: '$easeInOut',
 
   '.footer': {
