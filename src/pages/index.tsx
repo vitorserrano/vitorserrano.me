@@ -6,7 +6,7 @@ import { Layout, Text } from 'src/components'
 import DevAnimation from 'src/assets/dev.json'
 
 import { lottieAnimationOptions } from 'src/utils/lottieAnimation'
-import { Presentation, Button } from 'src/styles/pages/banner'
+import { Presentation, Button } from 'src/styles/pages/home'
 
 const Home = () => (
   <Layout>
