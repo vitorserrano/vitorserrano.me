@@ -8,9 +8,14 @@ export const StyledText = styled('p', {
   },
 
   a: {
-    color: '$white',
+    color: '$info',
     textDecoration: 'none',
     borderBottom: '1px solid $white',
+    cursor: 'pointer',
+
+    '&:hover': {
+      filter: 'brightness(150%)',
+    },
   },
 
   variants: {

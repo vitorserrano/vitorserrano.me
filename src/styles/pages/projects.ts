@@ -54,11 +54,10 @@ export const Card = styled('div', {
     backgroundColor: '$secondary',
     filter: 'brightness(150%)',
   },
-  '@xl': { maxWidth: 240 },
+  '@xl': { maxWidth: 240, minHeight: 240 },
 })
 
 export const Name = styled(Text, {
   color: '$white',
-  textTransform: 'capitalize',
   marginBottom: 12,
 })

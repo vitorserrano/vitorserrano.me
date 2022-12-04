@@ -19,14 +19,14 @@ export const socials = [
   },
   {
     id: '4',
-    name: 'instagram',
-    icon: 'InstagramLogo',
-    href: 'https://www.instagram.com/virtuzera/',
-  },
-  {
-    id: '5',
     name: 'twitter',
     icon: 'TwitterLogo',
     href: 'https://twitter.com/virtuzera',
+  },
+  {
+    id: '5',
+    name: 'instagram',
+    icon: 'InstagramLogo',
+    href: 'https://www.instagram.com/virtuzera/',
   },
 ]
