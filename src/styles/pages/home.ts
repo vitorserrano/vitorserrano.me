@@ -3,13 +3,13 @@ import { styled } from 'src/styles'
 export const Presentation = styled('div', {
   marginBottom: 80,
 
-  '.title': { marginLeft: 14 },
   strong: { color: '$primary' },
   '@lg': { marginBottom: 0 },
 })
 
 export const Button = styled('div', {
   display: 'flex',
+  marginLeft: -14,
 
   a: {
     fontSize: 14,
