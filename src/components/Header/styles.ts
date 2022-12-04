@@ -1,36 +1,69 @@
-import styled, { css } from 'styled-components'
+import { styled } from 'src/styles'
 
-export const Wrapper = styled.header`
-  ${({ theme: { colors, breakpoints } }) => css`
-    display: flex;
-    justify-content: center;
-    background: ${colors.backgroundLight};
-    height: 80px;
-    transition: all 0.3s ease-out;
-    box-shadow: inset 0 -1px 0 #29292e;
+export const Container = styled('header', {
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'center',
+  backgroundColor: '$background',
+  width: '100%',
+  paddingHorizontal: 24,
+  paddingVertical: 20,
 
-    ${breakpoints.devices.md} {
-      height: 120px;
-    }
-  `}
-`
+  '@md': { justifyContent: 'center' },
+})
 
-export const Container = styled.div`
-  ${({ theme: { colors, breakpoints } }) => css`
-    width: 100%;
-    background: ${colors.backgroundLight};
-    padding: 0 24px;
+export const NavBar = styled('nav', {
+  display: 'none',
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease-out;
-    box-shadow: inset 0 -1px 0 #29292e;
+  '@md': { display: 'block' },
+})
 
-    ${breakpoints.devices.xl} {
-      padding: 0;
-      max-width: 70rem;
-      min-width: 70rem;
-    }
-  `}
-`
+export const NavList = styled('ul', {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  listStyle: 'none',
+})
+
+export const NavItem = styled('li', {
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  transition: '$easeInOut',
+  borderRadius: 12,
+  cursor: 'pointer',
+
+  '&:hover': {
+    backgroundColor: '$secondary',
+    color: '$white',
+  },
+
+  '.active': {
+    color: '$white',
+    '&::after': {
+      content: '',
+      marginVertical: 0,
+      marginHorizontal: 'auto',
+      position: 'absolute',
+      top: 36,
+      left: 0,
+      right: 0,
+      width: 20,
+      height: 2,
+      backgroundColor: '$primary',
+    },
+  },
+
+  a: {
+    fontSize: '$xs',
+    textTransform: 'uppercase',
+    color: '$text',
+    fontFamily: '$text',
+    fontWeight: '400',
+    letterSpacing: 1.2,
+    textDecoration: 'none',
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+  },
+})

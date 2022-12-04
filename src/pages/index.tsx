@@ -1,45 +1,41 @@
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import Head from 'next/head'
+import Link from 'next/link'
+import LottieView from 'react-lottie'
+import { FiArrowRight } from 'react-icons/fi'
 
-import client from '../../apollo-client'
-import { getRepositories } from '../graphql/queries/getRepositories'
-import { Repositories } from '../graphql/schema'
+import { Layout, Text } from 'src/components'
+import DevAnimation from 'src/assets/dev.json'
 
-import { Header, Main, Footer } from '../components'
+import { lottieAnimationOptions } from 'src/utils/lottieAnimation'
+import { Presentation, Button } from 'src/styles/pages/home'
 
-export default function Home({
-  repositories,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
-  return (
-    <>
-      <Head>
-        <title>Vitor Serrano</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home = () => (
+  <Layout>
+    <Presentation>
+      <div className="title">
+        <Text type="heading">
+          Oi<strong>,</strong> eu sou <br /> Vitor Serrano<strong>.</strong>
+        </Text>
 
-      <Header />
-      <Main repositories={repositories} />
-      <Footer />
-    </>
-  )
-}
+        <Text type="paragraph">
+          Desenvolvedor Front-end web e mobile, <br />
+          apaixonado pelo ecossistema JavaScript.
+        </Text>
+      </div>
 
-export const getStaticProps: GetStaticProps = async () => {
-  try {
-    const { data }: Repositories = await client.query({
-      query: getRepositories,
-    })
+      <Button>
+        <Link href="/projects">
+          <a>
+            Ver projetos
+            <FiArrowRight size={20} />
+          </a>
+        </Link>
+      </Button>
+    </Presentation>
 
-    return {
-      props: {
-        repositories: data.user.pinnedItems.nodes,
-      },
-      revalidate: 10,
-    }
-  } catch {
-    return {
-      props: { repositories: [] },
-      revalidate: 10,
-    }
-  }
-}
+    <div>
+      <LottieView options={lottieAnimationOptions(DevAnimation)} />
+    </div>
+  </Layout>
+)
+
+export default Home
